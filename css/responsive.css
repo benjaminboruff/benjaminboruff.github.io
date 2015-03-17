@@ -9,19 +9,19 @@
   *** Portfolio Page **********
   *****************************/
   
-  #gallery li:nth-child(3n) {
+ /* #gallery li:nth-child(3n) {
     clear: left;
   }
     
    #gallery li:nth-child(5n) {
     clear: left;
   }
+}*/
 }
 
 
 
 @media screen and (min-width: 480px) {
-  
   /****************************
   *** Two Column Layout *******
   *****************************/
@@ -37,22 +37,16 @@
   }
   
   /****************************
-  3 * 5 = 15
-  100% - 15% = 85%
-  85 / 3 = 28.33333333333333
-  *****************************/
-  
-  /****************************
   *** Portfolio Page **********
   *****************************/
-  
-  #gallery li {
+  /*	#gallery li {	
     width: 28.3333%;
-  }
+  }*/ 
   
-  #gallery li:nth-child(4n) {
+  /*#gallery li:nth-child(4n) {
     clear: left;
-  }
+  }*/
+
   
   /****************************
   *** About Page ************
@@ -103,6 +97,18 @@
     border-bottom: 5px solid #5F7E9F;
     margin-bottom: 60px;
   }
-  
-  
+}
+
+/***************************************
+ *********Large Screen Gallery**********
+ ***************************************/
+
+@media screen and (max-width: 1145px) {
+
+	#gallery li.center {
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
 }
