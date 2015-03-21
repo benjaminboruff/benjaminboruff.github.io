@@ -1,34 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Benjamin Boruff</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link href='http://fonts.googleapis.com/css?family=Changa+One%7COpen+Sans:400italic,700italic,400,700,800' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benjamin Boruff</title>
+    <link href='http://fonts.googleapis.com/css?family=Changa+One%7COpen+Sans:400italic,700italic,400,700,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
   </head>
     <body>
-      <header>
-        <a href="index.html" id="logo">
-          <h1>Benjamin Boruff</h1>
-          <h2 id="profession">Programmer</h2>
-        </a>
-        <nav>
-          <ul>
-            <li><a href="index.html" >Portfolio</a></li>
-            <li><a href="about.html" class="selected">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
-      <div class="wrapper">
+      <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navTarget">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"><h1>Benjamin Boruff</h1></a>
+          </div><!-- /.navbar-header -->
+
+
+          <div class="collapse navbar-collapse" id="navTarget">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="index.html">Portfolio</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+
+      <div class="container">
         <section>
-          <img src="img/ben2.jpg" alt = "Photograph of Ben Boruff" class="profile-photo">
+          <img src="img/ben2.jpg" alt="Photograph of Ben Boruff" class="profile-photo img-circle">
           <h3>About</h3>
-          <p>Hi, I'm Ben Boruff! This is my personal webpage where I share information about myself, such as my interests, sample programs, and resume. When I am not coding, I am either out walking or drinking very good coffee.</p>
-          <p class="hide-me">If you are interested in following me on Twitter, my username is @yada-yada.</p>
+          <p class="lead">Hi, I'm Ben Boruff! This is my personal webpage where I share information about myself, such as my interests, sample programs, and resume. When I am not coding, I am either out walking or drinking very good coffee.</p>
+          <!-- <p class="hide-me">If you are interested in following me on Twitter, my username is @yada-yada.</p> -->
         </section>
         <footer>
 					<div class="hide-me">
@@ -38,6 +48,8 @@
           <p>&copy; 2015 Bejamin H Boruff.</p>
         </footer>
       </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 			<script src="js\main.js"></script>
     </body>
 </html>
