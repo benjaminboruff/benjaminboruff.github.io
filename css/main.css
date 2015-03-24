@@ -18,6 +18,12 @@ a:hover {
   line-height: 1.5;
 }
 
+  /* Added to push footer down */
+.pushDown {
+  margin-bottom: 50px;
+}
+
+
 /****************************
 ********* Jumbotron *********
 *****************************/
@@ -85,10 +91,6 @@ a:hover {
   margin: 5px 0 10px;
 }
 
-  /* Added to push footer down */
-#videoProjects {
-  margin-bottom: 50px;
-}
 
 /****************************
 ***********Page: About  *****
