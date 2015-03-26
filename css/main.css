@@ -106,6 +106,10 @@ a:hover {
 ***********Page: About  *****
 *****************************/
 
+.container.narContent {
+  max-width: 750px;
+}
+
 .profile-photo {
   display: block;
   max-width: 150px;
