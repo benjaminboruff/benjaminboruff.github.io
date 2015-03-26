@@ -36,10 +36,20 @@ a:hover {
 /****************************
 *********** Header  *********
 *****************************/
+
+.navbar-brand {
+  padding: 10px 15px;
+}
+
 #myNameNav {
-  font-family: 'Changa One', sans-serif;
+  /*font-family: 'Changa One', sans-serif;*/
   font-size: 1.4em;
   font-weight: normal;
+}
+
+#myNameNav small {
+  display: block;
+  font-size: .45em;
 }
 
 /****************************
