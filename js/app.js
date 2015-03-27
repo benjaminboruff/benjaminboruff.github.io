@@ -1,2 +1,4 @@
 // Site manager app
-angular.module('site-manager',['common']);
+(function () {
+  angular.module('site-manager',[]);
+})();
