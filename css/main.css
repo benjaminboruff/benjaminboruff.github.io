@@ -52,7 +52,7 @@ a:hover {
   display: block;
   font-size: .8em;
   clear: left;
-  margin: 0 auto 2px 15px;
+  margin: 0 auto 2px 16px;
   color: #A3B6C8
 }
 
@@ -83,15 +83,17 @@ a:hover {
 .footer {
   color: rgba(127,134,140,1);
   font-size: .70em;
-  padding-top: 5px;
-  height: 40px;
   background-color: rgba(198,194,189,.9);
+}
+
+.footer p {
+  margin: 2px 0;
 }
 
 .social-icon {
   height: 20px;
   width: 20px;
-  margin: 1px 5px;
+  margin: 6px 5px 0;
 }
 
 /****************************
