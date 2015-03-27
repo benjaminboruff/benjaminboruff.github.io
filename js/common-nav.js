@@ -1,4 +1,4 @@
-
+(function () {
   angular.module('site-manager')
     .directive('commonNav', commonNav);
 
@@ -32,3 +32,4 @@
       return this.navBtn === checkNavBtn;
     };
   }
+})();
