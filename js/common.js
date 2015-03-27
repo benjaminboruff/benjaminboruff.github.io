@@ -5,7 +5,7 @@ angular.module('common',[])
       restrict: 'E',
       templateUrl: 'site-nav.html',
       controller: function ($location) {// start nav button Controller
-        var currentLocation = $location.absUrl().split("/")[3];
+        var currentLocation = $location.absUrl().split("/").pop();
         // set nav button as active depending on html file name/location 
         if (currentLocation === 'index.html') {
           this.navBtn = 1; 
