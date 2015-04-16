@@ -1,0 +1,166 @@
+/****************************
+*********** General *********
+*****************************/
+body {
+  background-color: #73808c;
+  color: #cecdc3;
+}
+
+a {
+  color: #A3B6C8;
+}
+
+a:hover {
+  color: #52575d;
+}
+
+.lead {
+  line-height: 1.5;
+}
+
+  /* Added to push footer down */
+.pushDown {
+  margin-bottom: 50px;
+}
+
+
+/****************************
+********* Jumbotron *********
+*****************************/
+.jumbotron {
+  margin-top: 100px;
+  background-color: rgba(198,194,189,.9);
+}
+
+
+/****************************
+*********** Header  *********
+*****************************/
+
+.navbar-brand#brandTop {
+  margin-bottom: -12px;
+}
+
+#myNameNav {
+  display: block;
+  font-size: 1.2em;
+  font-weight: normal;
+  margin-right: -15px;
+}
+
+#brandSubHeading {
+  display: block;
+  font-size: .8em;
+  clear: left;
+  margin: 0 auto 2px 16px;
+  color: #A3B6C8
+}
+
+
+/****************************
+*********** Navigation ******
+*****************************/
+
+/* Navbar elements text colors */
+.navbar-inverse .navbar-brand { 
+  color: #A3B6C8
+}
+
+.navbar-inverse .navbar-nav>li>a {
+  color: #A3B6C8
+}
+
+/* This sets the color of the three stripes in the "hamburger"
+   icon that is toggled to when the navbar collapses
+   at smaller device sizes. */
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: #A3B6C8;
+}
+
+/****************************
+*********** Footer **********
+*****************************/
+.footer {
+  color: rgba(127,134,140,1);
+  font-size: .70em;
+  background-color: rgba(198,194,189,.9);
+}
+
+.footer p {
+  margin: 2px 0;
+}
+
+.social-icon {
+  height: 20px;
+  width: 20px;
+  margin: 6px 5px 0;
+}
+
+/****************************
+******** Page: Profile  *****
+*****************************/
+
+#vidHeadline {
+  margin-bottom: 20px; 
+}
+
+.vidCaption {
+  margin: 5px 0 10px;
+}
+
+
+/****************************
+***********Page: About  *****
+*****************************/
+
+.container.narContent {
+  max-width: 750px;
+}
+
+.profile-photo {
+  display: block;
+  max-width: 150px;
+  margin: 100px auto 30px;
+}
+
+/****************************
+***********Page: Contact ****
+*****************************/
+
+#primary {
+  margin-top: 100px;
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin:0;
+  font-size: 0.9em;
+}
+
+.contact-info a {
+  display: block;
+  min-height: 20px;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  padding: 0 0 0 30px;
+  margin: 0 0 10px;
+}
+
+.contact-info li.phone a {
+  background-image: url('../img/phone.png');
+}
+
+.contact-info li.mail a {
+  background-image: url('../img/mail.png');
+}
+
+.contact-info li.twitter a {
+  background-image: url('../img/twitter.png');
+}
+
+/****************************
+*********** Colors *********
+*****************************/
+
+
