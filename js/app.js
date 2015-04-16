@@ -17,7 +17,7 @@
           redirectTo: '/portfolio'
         });
     }])
-    .controller('comNavCtrl', function ($location) {
+    .controller('comNavCtrl', ['$location', function ($location) {
       var currentLocation = $location.absUrl().split("/").pop();
       // set nav button as active depending on html file name/location 
       if (currentLocation === 'portfolio') {
@@ -37,5 +37,5 @@
       this.isSelected = function (checkNavBtn) {
         return this.navBtn === checkNavBtn;
       };
-    });
+    }]);
 })();
