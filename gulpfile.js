@@ -20,9 +20,12 @@ var angularsrc = 'angular/angular.js';
 var angularrtsrc = 'angular-route/angular-route.js';
 var devdest = 'dev/';
 
+//********** BUILD Section ***************
 // Concatenate js files from dev into build
 gulp.task('scripts', function () {
-  return gulp.src([src + 'js/jquery.js', src + 'js/bootstrap.js', src + 'js/angular.js', src + 'js/angular-route.js', src + 'js/app.js'])
+  return gulp.src([src + 'js/jquery.js', src + 'js/bootstrap.js', 
+    src + 'js/angular.js', src + 'js/angular-route.js', src + 'js/app.js', 
+    src + 'js/pwheader.js', src + 'js/pwfooter.js'])
     .pipe(concat('main.js'))
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify())
@@ -31,7 +34,8 @@ gulp.task('scripts', function () {
 
 // Concatenate css files from dev into build
 gulp.task('style', function () {
-  return gulp.src([src + 'css/bootstrap.css', src + 'css/bootstrap-theme.css', src + 'css/main.css'])
+  return gulp.src([src + 'css/bootstrap.css', src + 'css/bootstrap-theme.css',
+   src + 'css/main.css'])
     .pipe(concat('main.css'))
     .pipe(rename({suffix: '.min'}))
     .pipe(stylemin())
@@ -56,6 +60,7 @@ gulp.task('index', function () {
     .pipe(gulp.dest(build));
 });
 
+//**************** dev SETUP section *****************
 // Setup Angular dev directories in main project directory
 gulp.task('mkdevjs', function () {
   return gulp.src([devsrc + jqsrc, devsrc + bootjssrc, devsrc + angularsrc, devsrc + angularrtsrc])
@@ -82,8 +87,9 @@ gulp.task('mkdevimg', function () {
     .pipe(gulp.dest(devdest + 'img/'));
 });
 
+//****** macro tasks *******
 // setup dev env task
 gulp.task('mkdev', ['mkdevjs', 'mkdevcss', 'mkdevind', 'mkdevpart', 'mkdevimg']);
 
-// Default task
+// Default build task
 gulp.task('default', ['scripts', 'style', 'img', 'partials']);
