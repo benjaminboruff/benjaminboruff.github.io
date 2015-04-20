@@ -10,11 +10,13 @@
           var currentLocation = $location.absUrl().split("/").pop();
           // set nav button as active depending on html file name/location 
           if (currentLocation === 'portfolio') {
-            this.navBtn = 1; 
-          } else if (currentLocation === 'about') {
+            this.navBtn = 1;
+          } else if (currentLocation === 'resume') {
             this.navBtn = 2;
-          } else if (currentLocation === 'contact') {
+          } else if (currentLocation === 'about') {
             this.navBtn = 3;
+          } else if (currentLocation === 'contact') {
+            this.navBtn = 4;
           } else {
             console.log(currentLocation);
             this.navBtn = 1;

@@ -61,6 +61,10 @@ a:hover {
 *********** Navigation ******
 *****************************/
 
+.navbar-nav > li > a {
+  padding-bottom: 20px;
+}
+
 /* Navbar elements text colors */
 .navbar-inverse .navbar-brand { 
   color: #A3B6C8
@@ -106,6 +110,15 @@ a:hover {
 
 .vidCaption {
   margin: 5px 0 10px;
+}
+
+/****************************
+******** Page: Resume   *****
+*****************************/
+
+#objective {
+  border-bottom: 1px solid;
+  padding-bottom: 5px;
 }
 
 

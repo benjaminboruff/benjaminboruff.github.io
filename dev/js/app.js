@@ -7,6 +7,9 @@
         when ('/portfolio', {
           templateUrl: 'partials/portfolio.html'
         }).
+        when ('/resume', {
+          templateUrl: 'partials/resume.html'
+        }).
         when ('/about', {
           templateUrl: 'partials/about.html'
         }).
