@@ -30,6 +30,16 @@ a:hover {
 .jumbotron {
   margin-top: 100px;
   background-color: rgba(198,194,189,.9);
+  color: #666;
+}
+
+#between {
+  padding-right: 20px;
+  border-right: 2px solid #666;
+}
+
+#rightinfo {
+  padding-top: 25px;
 }
 
 
