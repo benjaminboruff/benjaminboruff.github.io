@@ -7,6 +7,7 @@ var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var stylemin = require('gulp-minify-css');
 var templateCache = require('gulp-angular-templatecache');
+var runSequence = require('run-sequence');
 
 // Define source and build directories
 var src = 'dev/';
@@ -101,4 +102,7 @@ gulp.task('mkdevimg', function () {
 gulp.task('mkdev', ['mkdevjs', 'mkdevcss', 'mkdevind', 'mkdevpart', 'mkdevimg']);
 
 // Default build task
-gulp.task('default', ['templates', 'scripts', 'style', 'img', 'partials']);
+gulp.task('default', function() {
+  runSequence('templates', 'scripts', ['style', 'img', 'partials'], function(){
+    console.log('Done!');
+  })});
