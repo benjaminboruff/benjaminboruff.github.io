@@ -116,7 +116,9 @@ a:hover {
 ******** Page: Resume   *****
 *****************************/
 
-#objective {
+#objective,
+#programming,
+#education {
   border-bottom: 1px solid;
   padding-bottom: 5px;
 }

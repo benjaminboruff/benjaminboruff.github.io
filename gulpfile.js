@@ -6,6 +6,7 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var stylemin = require('gulp-minify-css');
+var templateCache = require('gulp-angular-templatecache');
 
 // Define source and build directories
 var src = 'dev/';
@@ -21,15 +22,23 @@ var angularrtsrc = 'angular-route/angular-route.js';
 var devdest = 'dev/';
 
 //********** BUILD Section ***************
+// Preload partials into $templateCache
+gulp.task('templates', function () {
+  return gulp.src(src + 'partials/*.html')
+    .pipe(templateCache('templates.js', {root: 'partials/', module: 'site-manager'}))
+    .pipe(gulp.dest(src + 'js/'));
+});
+
+
 // Concatenate js files from dev into build
 gulp.task('scripts', function () {
   return gulp.src([src + 'js/jquery.js', src + 'js/bootstrap.js', 
-    src + 'js/angular.js', src + 'js/angular-route.js', src + 'js/app.js', 
-    src + 'js/pwheader.js', src + 'js/pwfooter.js'])
-    .pipe(concat('main.js'))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(uglify())
-    .pipe(gulp.dest(build + 'js/'));
+      src + 'js/angular.js', src + 'js/angular-route.js', src + 'js/app.js', 
+      src + 'js/templates.js', src + 'js/pwheader.js', src + 'js/pwfooter.js'])
+      .pipe(concat('main.js'))
+      .pipe(rename({suffix: '.min'}))
+      .pipe(uglify())
+      .pipe(gulp.dest(build + 'js/'));
 });
 
 // Concatenate css files from dev into build
@@ -92,4 +101,4 @@ gulp.task('mkdevimg', function () {
 gulp.task('mkdev', ['mkdevjs', 'mkdevcss', 'mkdevind', 'mkdevpart', 'mkdevimg']);
 
 // Default build task
-gulp.task('default', ['scripts', 'style', 'img', 'partials']);
+gulp.task('default', ['templates', 'scripts', 'style', 'img', 'partials']);
