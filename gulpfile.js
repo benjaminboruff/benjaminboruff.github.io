@@ -34,8 +34,9 @@ gulp.task('templates', function () {
 // Concatenate js files from dev into build
 gulp.task('scripts', function () {
   return gulp.src([src + 'js/jquery.js', src + 'js/bootstrap.js', 
-      src + 'js/angular.js', src + 'js/angular-route.js', src + 'js/app.js', 
-      src + 'js/templates.js', src + 'js/pwheader.js', src + 'js/pwfooter.js'])
+      src + 'js/angular.js', src + 'js/angular-route.js', src + 'js/ui-bootstrap-tpls.js', 
+      src + 'js/app.js', src + 'js/templates.js', src + 'js/pwheader.js',
+      src + 'js/pwfooter.js'])
       .pipe(concat('main.js'))
       .pipe(rename({suffix: '.min'}))
       .pipe(uglify())
