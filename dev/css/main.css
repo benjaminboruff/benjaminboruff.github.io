@@ -139,6 +139,10 @@ a:hover {
 ******** Page: Resume   *****
 *****************************/
 
+#resume {
+  margin-top: 55px;
+}
+
 #objective,
 #programming,
 #education {
@@ -196,9 +200,3 @@ a:hover {
 .contact-info li.twitter a {
   background-image: url('../img/twitter.png');
 }
-
-/****************************
-*********** Colors *********
-*****************************/
-
-

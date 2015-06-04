@@ -5,7 +5,10 @@
         <div class="row">
           <div class="col-sm-6 hidden-xs">
             <div id="between">
-              <img class="img-responsive center-block" alt="Under construction" src="img/undercon.png">
+              <h4>{{pfctrl.apodData.title}}</h4>
+              <img class="img-responsive center-block" alt="NASA Picture of the day" ng-src="{{pfctrl.apodData.url}}">
+              <h5>{{pfctrl.apodData.explanation}} </h5>
+              <h6><em>(Title, image, and explanation loaded automatically from NASA APOD API endpoint). This data changes daily.)</em></h6>
             </div>
           </div>
           <div class="col-sm-6">
