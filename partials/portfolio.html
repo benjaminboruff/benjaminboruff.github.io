@@ -6,7 +6,12 @@
           <div class="col-sm-6 hidden-xs">
             <div id="between">
               <h4>{{pfctrl.apodData.title}}</h4>
-              <img class="img-responsive center-block" alt="NASA Picture of the day" ng-src="{{pfctrl.apodData.url}}">
+              <div class="embed-responsive embed-responsive-16by9" ng-show="pfctrl.video">
+                <iframe class="embed-responsive-item" ng-src="{{pfctrl.apodData.url | trusted}}" allowFullScreen></iframe>
+              </div>
+              <div ng-hide="pfctrl.video">
+                <img class="img-responsive center-block" alt="NASA Picture of the day" ng-src="{{pfctrl.apodData.url}}">
+              </div>
               <h5>{{pfctrl.apodData.explanation}} </h5>
               <h6><em>(Title, image, and explanation loaded automatically from NASA APOD API endpoint. These data change daily.)</em></h6>
             </div>
@@ -28,7 +33,7 @@
       <tabset justified="true" id="max720px" class="center-block">      
         <tab heading="TV Invasion!">
           <div class="embed-responsive embed-responsive-4by3">            
-            <iframe clas="embed-responsive-item"
+            <iframe class="embed-responsive-item"
               src="https://www.youtube.com/embed/LwvTK2_G1-k" allowFullScreen>
             </iframe> 
           </div>
