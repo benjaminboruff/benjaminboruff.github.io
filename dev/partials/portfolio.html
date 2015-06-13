@@ -6,6 +6,9 @@
           <div class="col-sm-6 hidden-xs">
             <div id="between">
               <h4>{{pfctrl.apodData.title}}</h4>
+              <div ng-show="pfctrl.apodData.error">
+                <h3>An ERROR has occured at api.data.gov/nasa/planetary/apod: {{pfctrl.apodData.message}}</h3>
+              </div>
               <div class="embed-responsive embed-responsive-16by9" ng-show="pfctrl.video">
                 <iframe class="embed-responsive-item" ng-src="{{pfctrl.apodData.url | trusted}}" allowFullScreen></iframe>
               </div>
