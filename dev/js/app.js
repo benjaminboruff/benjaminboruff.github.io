@@ -29,7 +29,13 @@
       return $http.get('https://api.data.gov/nasa/planetary/apod?api_key=ep9KoIgbcqVVVQ7JiLz5vcYql67pTJRPBTeeoIal&format=JSON')
         .then(function (res) {
         return res.data;
-      });
+      },
+        function (err) {
+          return {
+            message: "There has been an error in your request. Please try again later.",
+            error: "Admins are on it!"
+          };
+        });
     };
   }])
     .controller('PortfolioCtrl', ['apodService', function (apodService) {
