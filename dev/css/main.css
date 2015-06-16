@@ -36,9 +36,10 @@ a:hover {
   color: #666;
 }
 
-
-#leftinfo {
-  padding-top: 5px;
+.well {
+  padding: 10px;
+  border-radius: 4px;
+  background: rgba(238,238,242,.5);
 }
 
 
