@@ -3,8 +3,16 @@
     <div class="container">      
       <div class="jumbotron">
         <div class="row">
-          <div class="col-sm-6 hidden-xs">
-            <div id="between">
+          <div class="col-sm-6">
+            <div id="leftinfo">
+              <p>Welcome to my website. This is where I will be adding sample webapps in the next
+              few weeks. As a matter of fact, this entire site is a single-page app!
+              It looks great on mobile, too, thanks to the Bootstrap CSS framework. Try it out.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div>
               <h4>{{pfctrl.apodData.title}}</h4>
               <div ng-show="pfctrl.apodData.error">
                 <h3>An ERROR has occurred retrieving the NASA Astronomy Picture of the Day. {{pfctrl.apodData.message}}</h3>
@@ -19,13 +27,7 @@
               <h6><em>(Title, image/video, and explanation loaded automatically from NASA's APOD API endpoint. These data change daily.)</em></h6>
             </div>
           </div>
-          <div class="col-sm-6">
-            <div id="rightinfo">
-              <p>Welcome to my website. This is where I will be adding sample webapps in the next
-              few weeks. As a matter of fact, this entire site is a single-page app!
-              It looks great on mobile, too, thanks to the Bootstrap CSS framework. Try it out.</p>
-            </div>
-          </div>
+          
         </div>
       </div>
     </div>
