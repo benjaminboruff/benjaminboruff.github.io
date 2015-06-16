@@ -17,7 +17,9 @@ var devsrc = 'public/vendor/';
 var jqsrc = 'jquery/dist/jquery.js';
 var bootjssrc = 'bootstrap/dist/js/bootstrap.js';
 var bootcsssrc = 'bootstrap/dist/css/bootstrap.css';
+var bootcsssrcmap = 'bootstrap/dist/css/bootstrap.css.map';
 var bootcssthsrc = 'bootstrap/dist/css/bootstrap-theme.css';
+var bootcssthsrcmap = 'bootstrap/dist/css/bootstrap-theme.css.map';
 var angularsrc = 'angular/angular.js';
 var angularrtsrc = 'angular-route/angular-route.js';
 var devdest = 'dev/';
@@ -79,7 +81,7 @@ gulp.task('mkdevjs', function () {
 });
 
 gulp.task('mkdevcss', function () {
-  return gulp.src([devsrc + bootcsssrc, devsrc + bootcssthsrc])
+  return gulp.src([devsrc + bootcsssrc, devsrc + bootcsssrcmap, devsrc + bootcssthsrc, devsrc + bootcssthsrcmap])
     .pipe(gulp.dest(devdest + 'css/'));
 });
 
