@@ -39,7 +39,10 @@ a:hover {
 .well {
   padding: 10px;
   border-radius: 4px;
-  background: rgba(238,238,242,.5);
+  border-color: rgba(198,194,189,0.1);
+  /*background: rgba(238,238,242,0.5);*/
+  background: rgba(115,128,140,0.95);
+  color: #cecdc3;
 }
 
 
@@ -70,6 +73,12 @@ a:hover {
 /****************************
 *********** Navigation ******
 *****************************/
+
+/* colors of main top nav container */
+#main-nav-cont {
+    background-color: #990000;
+    border-color: #000;
+}
 
 .navbar-nav > li > a {
   padding-bottom: 20px;
