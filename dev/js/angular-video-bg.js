@@ -280,8 +280,8 @@
                         position: 'absolute',
                         width: playerDimensions.width + 'px',
                         height: playerDimensions.height + 'px',
-                        left: parseInt((parentDimensions.width - playerDimensions.width) / 2, 10) + 'px',
-                        top: parseInt((parentDimensions.height - playerDimensions.height) / 2, 10) + 'px'
+                        left: ((parentDimensions.width - playerDimensions.width) / 2).toString() + 'px',
+                        top: ((parentDimensions.height - playerDimensions.height) / 2).toString() + 'px'
                     };
                     if (!scope.allowClickEvents) {
                         options.pointerEvents = 'none';
