@@ -40,11 +40,9 @@ a:hover {
   padding: 10px;
   border-radius: 4px;
   border-color: rgba(115,128,140,0.1);
-  /*background: rgba(238,238,242,0.5);*/
   background: rgba(115,128,140,0.95);
   color: #cecdc3;
 }
-
 
 /****************************
 *********** Header  *********
@@ -134,11 +132,16 @@ a:hover {
 .nav-tabs > li.active > a, 
 .nav-tabs > li.active > a:hover, 
 .nav-tabs > li.active > a:focus {
-  background-color:  rgba(198,194,189,.9);
+  background-color:  #990000;
+  color: #cecdc3;
 }
 
 .nav-tabs.nav-justified > li > a {
-  border: 1px solid #ddd;
+  border: 1px solid #444;
+}
+
+.nav-tabs.nav-justified > .active > a, .nav-tabs.nav-justified > .active > a:hover, .nav-tabs.nav-justified > .active > a:focus {
+  border: 1px solid #444;
 }
 
 /****************************
