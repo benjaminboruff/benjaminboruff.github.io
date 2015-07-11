@@ -1,47 +1,48 @@
 <main>
-  <section><!-- Start Jumbotron -->
-    <div class="container">      
+  <section>
+    <!-- Start Jumbotron -->
+    <div class="container">
       <div class="jumbotron">
-        <video-bg video-id="'5nw_XdmBR1A'"></video-bg>
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="well" id="leftinfo">
-              <p>Welcome to my website. This is where I will be adding sample webapps in the next
-              few weeks. As a matter of fact, this entire site is a single-page app!
-              It looks great on mobile, too, thanks to the Bootstrap CSS framework. Try it out.
-              </p>
+        <video-bg video-id="'5nw_XdmBR1A'">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="well" id="leftinfo">
+                <p>Welcome to my website. This is where I will be adding sample webapps in the next few weeks. As a matter of fact, this entire
+                  site is a single-page app! It looks great on mobile, too, thanks to the Bootstrap CSS framework. Try it out.</p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="well">
+                <h4>{{pfctrl.apodData.title}}</h4>
+                <div ng-show="pfctrl.apodData.error">
+                  <h3>An ERROR has occurred retrieving the NASA Astronomy Picture of the Day. {{pfctrl.apodData.message}}</h3>
+                </div>
+                <div class="embed-responsive embed-responsive-16by9" ng-show="pfctrl.video">
+                  <iframe class="embed-responsive-item" ng-src="{{pfctrl.apodData.url | trusted}}" allowFullScreen></iframe>
+                </div>
+                <div ng-hide="pfctrl.video">
+                  <img class="img-responsive center-block" alt="NASA Picture of the day" ng-src="{{pfctrl.apodData.url}}">
+                </div>
+                <h5>{{pfctrl.apodData.explanation}}</h5>
+                <h6>
+                  <em>(Title, image/video, and explanation loaded automatically from NASA's APOD API endpoint. These data change daily.)</em>
+                </h6>
+              </div>
             </div>
           </div>
-          <div class="col-sm-6">
-            <div class="well">
-              <h4>{{pfctrl.apodData.title}}</h4>
-              <div ng-show="pfctrl.apodData.error">
-                <h3>An ERROR has occurred retrieving the NASA Astronomy Picture of the Day. {{pfctrl.apodData.message}}</h3>
-              </div>
-              <div class="embed-responsive embed-responsive-16by9" ng-show="pfctrl.video">
-                <iframe class="embed-responsive-item" ng-src="{{pfctrl.apodData.url | trusted}}" allowFullScreen></iframe>
-              </div>
-              <div ng-hide="pfctrl.video">
-                <img class="img-responsive center-block" alt="NASA Picture of the day" ng-src="{{pfctrl.apodData.url}}">
-              </div>
-              <h5>{{pfctrl.apodData.explanation}} </h5>
-              <h6><em>(Title, image/video, and explanation loaded automatically from NASA's APOD API endpoint. These data change daily.)</em></h6>
-            </div>
-          </div>
-          
-        </div>
+        </video-bg>
       </div>
     </div>
-  </section><!-- End Jumbotron -->
-  <section><!-- Video Projects -->
+  </section>
+  <!-- End Jumbotron -->
+  <section>
+    <!-- Video Projects -->
     <div class="container pushDown">
-    <h4 align="center" id="vidHeadline">Video Projects from Production Class</h4>
-      <tabset justified="true" id="max720px" class="center-block">      
+      <h4 align="center" id="vidHeadline">Video Projects from Production Class</h4>
+      <tabset justified="true" id="max720px" class="center-block">
         <tab heading="TV Invasion!">
-          <div class="embed-responsive embed-responsive-4by3">            
-            <iframe class="embed-responsive-item"
-              src="https://www.youtube.com/embed/LwvTK2_G1-k" allowFullScreen>
-            </iframe> 
+          <div class="embed-responsive embed-responsive-4by3">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/LwvTK2_G1-k" allowFullScreen></iframe>
           </div>
           <div align="center">
             <p class="vidCaption">TV Invasion! was a live-to-tape production that I wrote/directed.</p>
@@ -49,9 +50,7 @@
         </tab>
         <tab heading="Murder and Merlot">
           <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item"
-              src="https://www.youtube.com/embed/VM7EUeYPjfk" allowFullScreen>
-            </iframe>
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VM7EUeYPjfk" allowFullScreen></iframe>
           </div>
           <div align="center">
             <p class="vidCaption">Murder and Merlot was my first video effort. Silent but silly.</p>
@@ -59,5 +58,6 @@
         </tab>
       </tabset>
     </div>
-  </section><!-- End Video Projects -->
+  </section>
+  <!-- End Video Projects -->
 </main>

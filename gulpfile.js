@@ -23,7 +23,7 @@ var bootcssthsrcmap = 'bootstrap/dist/css/bootstrap-theme.css.map';
 var angularsrc = 'angular/angular.js';
 var angularrtsrc = 'angular-route/angular-route.js';
 var angularBootstrapsrc = 'angular-bootstrap/ui-bootstrap-tpls.js'
-var angularVideoBgsrc = 'angular-video-bg/angular-video-bg.min.js';
+var angularVideoBgsrc = 'angular-video-bg/angular-video-bg.js';
 var devdest = 'dev/';
 
 //********** BUILD Section ***************
@@ -39,7 +39,7 @@ gulp.task('templates', function () {
 gulp.task('scripts', function () {
   return gulp.src([src + 'js/jquery.js', src + 'js/bootstrap.js', 
       src + 'js/angular.js', src + 'js/angular-route.js', src + 'js/ui-bootstrap-tpls.js',
-      src + 'js/angular-video-bg.min.js', 
+      src + 'js/angular-video-bg.js', 
       src + 'js/app.js', src + 'js/templates.js', src + 'js/pwheader.js',
       src + 'js/pwfooter.js'])
       .pipe(concat('main.js'))
