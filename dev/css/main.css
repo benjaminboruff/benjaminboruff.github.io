@@ -102,9 +102,10 @@ a:hover {
 *********** Footer **********
 *****************************/
 .footer {
-  color: rgba(127,134,140,1);
+  /*color: rgba(127,134,140,1);*/
+  color: rgba(115,128,140,0.7);
   font-size: .70em;
-  background-color: rgba(198,194,189,.9);
+  background-color: rgb(0,0,0);
 }
 
 .footer p {
@@ -115,6 +116,8 @@ a:hover {
   height: 20px;
   width: 20px;
   margin: 6px 5px 0;
+  background-color: rgba(115,128,140,0.7);
+  border-radius: 2px;
 }
 
 /****************************
