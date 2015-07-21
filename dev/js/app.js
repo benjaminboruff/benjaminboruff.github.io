@@ -26,7 +26,7 @@
     .service('apodService', ['$http', function ($http) {
     this.get = function () {
       //console.log('Hello, from apodService!');
-      return $http.get('https://api.data.gov/nasa/planetary/apod?api_key=ep9KoIgbcqVVVQ7JiLz5vcYql67pTJRPBTeeoIal&format=JSON')
+      return $http.get('https://api.data.gov/nasa/planetary/apod?api_key=ep9KoIgbcqVVVQ7JiLz5vcYql67pTJRPBTeeoIal&format=JSON', {cache: true})
         .then(function (res) {
         return res.data;
       },
