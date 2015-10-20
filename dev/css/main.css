@@ -212,3 +212,7 @@ a:hover {
 .contact-info li.twitter a {
   background-image: url('../img/twitter.png');
 }
+
+.contact-info li.github a {
+  background-image: url('../img/github.png');
+}
