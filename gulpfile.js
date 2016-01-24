@@ -5,7 +5,7 @@ var gulp = require('gulp');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
-var stylemin = require('gulp-minify-css');
+var stylemin = require('gulp-cssnano');
 var templateCache = require('gulp-angular-templatecache');
 var runSequence = require('run-sequence');
 
