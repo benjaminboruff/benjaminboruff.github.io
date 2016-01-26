@@ -2,7 +2,7 @@
 "use strict";
 // Site manager app
 (function () {
-  angular.module('site-manager', ['ngRoute', 'ui.bootstrap', 'angularVideoBg'])
+  angular.module('site-manager', ['ngRoute', 'ui.bootstrap', 'ngAnimate', 'angularVideoBg'])
     .config(['$routeProvider', function ($routeProvider) {
     $routeProvider.
       when('/portfolio', {

@@ -4,7 +4,7 @@
     <div class="container">
       <div class="jumbotron">
         <video-bg video-id="'aLQeqyOK4lE'">
-          <div class="row">
+          <div class="row" id="jumborows">
             <div class="col-sm-6">
               <div class="well" id="leftinfo">
                 <p>Welcome to my website. This site is an SPA written in AngularJS 1.x. Take a look at it on your mobile device, too!</p>
@@ -38,24 +38,24 @@
     <!-- Video Projects -->
     <div class="container pushDown">
       <h4 align="center" id="vidHeadline">Video Projects from Production Class</h4>
-      <tabset justified="true" id="max720px" class="center-block">
-        <tab heading="TV Invasion!" id="tab-color">
+      <uib-tabset justified="true" id="max720px" class="center-block">
+        <uib-tab heading="TV Invasion!" id="tab-color">
           <div class="embed-responsive embed-responsive-4by3">
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/LwvTK2_G1-k" allowFullScreen></iframe>
           </div>
           <div align="center">
             <p class="vidCaption">TV Invasion! was a live-to-tape production that I wrote/directed.</p>
           </div>
-        </tab>
-        <tab heading="Murder and Merlot" id="tab-color">
+        </uib-tab>
+        <uib-tab heading="Murder and Merlot" id="tab-color">
           <div class="embed-responsive embed-responsive-16by9">
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VM7EUeYPjfk" allowFullScreen></iframe>
           </div>
           <div align="center">
             <p class="vidCaption">Murder and Merlot was my first video effort. Silent but silly.</p>
           </div>
-        </tab>
-      </tabset>
+        </uib-tab>
+      </uib-tabset>
     </div>
   </section>
   <!-- End Video Projects -->

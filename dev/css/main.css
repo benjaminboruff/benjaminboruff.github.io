@@ -44,6 +44,10 @@ a:hover {
   color: #cecdc3;
 }
 
+#jumborows {
+    z-index: 7;
+}
+
 /****************************
 *********** Header  *********
 *****************************/
@@ -132,7 +136,17 @@ a:hover {
   margin: 5px 0 10px;
 }
 
-.nav-tabs > li.active > a, 
+.uib-tab {
+    background-color: #990000;
+    color: #cecdc3;
+}
+
+#tab-color > li.active > a {
+    background-color: black;
+    color: #cecdc3;
+}
+
+/*.nav-tabs > li.active > a, 
 .nav-tabs > li.active > a:hover, 
 .nav-tabs > li.active > a:focus {
   background-color:  #990000;
@@ -145,7 +159,7 @@ a:hover {
 
 .nav-tabs.nav-justified > .active > a, .nav-tabs.nav-justified > .active > a:hover, .nav-tabs.nav-justified > .active > a:focus {
   border: 1px solid #444;
-}
+}*/
 
 /****************************
 ******** Page: Resume   *****

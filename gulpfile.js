@@ -21,6 +21,7 @@ var bootcsssrcmap = 'bootstrap/dist/css/bootstrap.css.map';
 var bootcssthsrc = 'bootstrap/dist/css/bootstrap-theme.css';
 var bootcssthsrcmap = 'bootstrap/dist/css/bootstrap-theme.css.map';
 var angularsrc = 'angular/angular.js';
+var angularanisrc = 'angular-animate/angular-animate.js';
 var angularrtsrc = 'angular-route/angular-route.js';
 var angularBootstrapsrc = 'angular-bootstrap/ui-bootstrap-tpls.js'
 var angularVideoBgsrc = 'angular-video-bg/angular-video-bg.js';
@@ -37,11 +38,19 @@ gulp.task('templates', function () {
 
 // Concatenate js files from dev into build
 gulp.task('scripts', function () {
-  return gulp.src([src + 'js/jquery.js', src + 'js/bootstrap.js', 
-      src + 'js/angular.js', src + 'js/angular-route.js', src + 'js/ui-bootstrap-tpls.js',
-      src + 'js/angular-video-bg.js', 
-      src + 'js/app.js', src + 'js/templates.js', src + 'js/pwheader.js',
-      src + 'js/pwfooter.js'])
+  return gulp.src([
+        src + 'js/jquery.js',
+        src + 'js/bootstrap.js', 
+        src + 'js/angular.js', 
+        src + 'js/angular-route.js',
+        src + 'js/ui-bootstrap-tpls.js',
+        src + 'js/angular-animate.js',
+        src + 'js/angular-video-bg.js', 
+        src + 'js/app.js',
+        src + 'js/templates.js',
+        src + 'js/pwheader.js',
+        src + 'js/pwfooter.js'
+      ])
       .pipe(concat('main.js'))
       .pipe(rename({suffix: '.min'}))
       .pipe(uglify())
