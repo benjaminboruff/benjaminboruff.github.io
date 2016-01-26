@@ -62,8 +62,8 @@ gulp.task('style', function () {
   return gulp.src([src + 'css/bootstrap.css', src + 'css/bootstrap-theme.css',
    src + 'css/main.css'])
     .pipe(concat('main.css'))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(stylemin())
+    //.pipe(rename({suffix: '.min'}))
+    //.pipe(stylemin())
     .pipe(gulp.dest(build + 'css/'));
 });
 
