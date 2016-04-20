@@ -60,14 +60,14 @@ a:hover {
   display: block;
   font-size: 1.2em;
   font-weight: normal;
-  margin-right: -15px;
+  margin: 0 auto auto auto;
 }
 
 #brandSubHeading {
   display: block;
-  font-size: .8em;
+  font-size: .7em;
   clear: left;
-  margin: 0 auto 2px 16px;
+ margin: 0 auto 4px auto;
   color: #A3B6C8
 }
 
