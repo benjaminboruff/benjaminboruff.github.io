@@ -1,5 +1,11 @@
+import Page from '../components/page';
+
 const Resume = () => {
-  return <div>My resume</div>;
+  return (
+    <Page>
+      <div>My resume</div>
+    </Page>
+  );
 }
 
 export default Resume;

@@ -1,36 +1,13 @@
 import Page from '../components/page';
 import Link from 'next/link';
 import fetch from 'isomorphic-fetch';
+import * as FontAwesome from 'react-icons/lib/fa'
 import { red, blueGrey, darkText } from '../style/mdcolors';
 
 const Home = (props) => {
   return (
     <div>
       <Page>
-        <div className="logo  w3-bar w3-theme w3-large w3-card-4">
-          <Link href="/">
-            <a>
-              <img  className="w3-bar-item w3-circle w3-mobile w3-image" src="https://avatars2.githubusercontent.com/u/11185240?v=4" />
-            </a>
-          </Link>
-          <Link href="/">
-            <a className="w3-bar-item w3-button w3-mobile w3-hover-none w3-text-light-grey w3-hover-text-blue">Benjamin H Boruff</a>
-          </Link>
-          <Link href="/resume">
-            <a className="w3-bar-item w3-button w3-mobile w3-hover-none w3-text-light-grey w3-hover-text-white">Resum&#233;</a>
-          </Link>
-          <Link href="/about">
-            <a className="w3-bar-item w3-button w3-mobile w3-hover-none w3-text-light-grey w3-hover-text-white">About</a>
-          </Link>
-          <Link href="/contact">
-            <a className="w3-bar-item w3-button w3-mobile w3-hover-none w3-text-light-grey w3-hover-text-white">Contact</a>
-          </Link>
-          <Link href="/">
-            <a className="w3-bar-item w3-button w3-mobile w3-right">
-              <i className="fa fa-bars"></i>
-            </a>
-          </Link>
-        </div>
         <div className="jumbo w3-container w3-card-4 w3-round w3-light-grey">
           <button className="btn btn-danger">Danger!</button>
           <h3>My site reboot!</h3>
@@ -50,24 +27,8 @@ const Home = (props) => {
         </div>
       </Page>
       <style jsx>{`
-        // .main {
-        //   position: fixed;
-        //   width: 100%;
-        //   left: 0;
-        //   top: 0;
-        // }
-
-        // .logo {
-        //   padding: 10px;
-        // }
-
-        .logo img {
-          max-width: 60px;
-        }
-
         .jumbo {
           margin: 10% 20% 10%;
-          padding: 10px;
         }
       `}</style>
     </div>
