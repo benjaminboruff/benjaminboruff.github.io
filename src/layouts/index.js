@@ -13,7 +13,9 @@ const TemplateWrapper = ({ children, data }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <Header />
+    <Header name={data.site.siteMetadata.title}
+            email={data.site.siteMetadata.email}
+            resumeUrl={data.site.siteMetadata.resumeUrl} />
     <div className="root">
     <style jsx>{`
       .root {
@@ -36,10 +38,12 @@ TemplateWrapper.propTypes = {
 export default TemplateWrapper
 
 export const query = graphql`
-  query TitleQuery {
+  query personalSiteQuery {
     site {
       siteMetadata {
         title
+        email
+        resumeUrl
       }
     }
   }

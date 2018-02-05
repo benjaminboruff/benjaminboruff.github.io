@@ -2,43 +2,67 @@ import React from 'react'
 import Link from 'gatsby-link'
 import Gravatar from 'react-gravatar'
 
-const Header = () => (
+const Header = (props) => (
   <div className="root">
     <style jsx>{`
       .root {
         background: rebeccapurple;
-        margin-bottom: 1.45rem;
       }
-      .container {
-        margin: 0 auto;
-        max-width: 960px;
-        padding: 1.45rem 1.0875rem;
-        color: white;
+      .wrapper {
+        display: grid;
+        height: 20rem;
+        grid-template-columns: 2fr;
+        grid-gap: 10px;
+        grid-template-areas:
+          "name . "
+          "resume . "
+          "about gravatar";
+        align-items: center;
+        justify-items: center;
       }
-      h1 {
-        margin: 0;
+      @media (min-width: 700px) {
+        .wrapper {
+          display: grid;
+          height: 5rem;
+          grid-template-columns: repeat(6,1fr);
+          grid-gap: 20px;
+          grid-template-areas: "name name . resume about gravatar";
+          align-items: center;
+          justify-items: center;
+        }
       }
-      h3 {
-        margin-top: -2rem;
+      .name {
+        grid-area: name;
+      }
+      .resume {
+        grid-area: resume;
+      }
+      .about {
+        grid-area: about;
+      }
+      .gravatar {
+        grid-area: gravatar;
       }
     `}
     </style>
-    <div className="container">
-      <h1>
-        <Link style={{color: 'white', textDecoration: 'none'}} to="/">
-          Benjamin H Boruff
+    <div className="wrapper">
+      <h2 className="name">
+        <Link style={{ color: 'white', textDecoration: 'none' }} to="/">
+          {props.name}
         </Link>
-        <Gravatar style={{borderRadius: '23px', marginLeft: '1rem', marginTop: '0', marginBottom: '-0.75rem', float: 'right'}} email="ben@boruff.me" />
-      </h1>
-      
-      <h3>
-        <a style={{color: 'white', textDecoration: 'none', float: 'right', marginRight: '1rem'}} href="https://stackoverflow.com/cv/benjaminboruff">
-            Resum&#233;
+      </h2>
+      <span></span>
+      <h4 className="resume">
+        <a style={{ color: 'white', textDecoration: 'none' }} href={props.resumeUrl} >
+          Resum&#233;
         </a>
-        <Link style={{color: 'white', textDecoration: 'none', float: 'right', marginRight: '1rem'}} to="/about/">
-            About
+      </h4>
+      <h4 className="about">
+        <Link style={{ color: 'white', textDecoration: 'none' }} to="/about/">
+          About
         </Link>
-      </h3>    
+      </h4>
+      <Gravatar className="gravatar" style={{ borderRadius: '23px', margin: '0'}} email={props.email} />
     </div>
   </div>
 )
