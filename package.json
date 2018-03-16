@@ -11,6 +11,6 @@
     "run-sequence": "~1.0.2"
   },
   "scripts": {
-    "gulp": "./node_modules/.bin/gulp"
+    "gulp": "gulp"
   }
 }
