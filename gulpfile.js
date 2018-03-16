@@ -11,7 +11,7 @@ var runSequence = require('run-sequence');
 
 // Define source and build directories
 var src = 'dev/';
-var build = './';
+var build = 'build/';
 // mkdev directories
 var devsrc = 'public/vendor/';
 var jqsrc = 'jquery/dist/jquery.js';
@@ -59,7 +59,7 @@ gulp.task('scripts', function () {
 
 // Concatenate css files from dev into build
 gulp.task('style', function () {
-  return gulp.src([src + 'css/bootstrap.css', src + 'css/bootstrap-theme.css',
+  return gulp.src([src + 'css/bootstrap.css', src + 'css/bootstrap-theme.css', src + 'css/bootstrap-theme.css.map',
    src + 'css/main.css'])
     .pipe(concat('main.css'))
     //.pipe(rename({suffix: '.min'}))
@@ -118,6 +118,6 @@ gulp.task('mkdev', ['mkdevjs', 'mkdevcss', 'mkdevind', 'mkdevpart', 'mkdevimg'])
 
 // Default build task
 gulp.task('default', function() {
-  runSequence('templates', 'scripts', ['style', 'img', 'partials'], function(){
-    console.log('Done!');
-  })});
+  runSequence('index', 'templates', 'scripts', ['style', 'img', 'partials'], function(){
+    //console.log('Done!');
+  })}); 
