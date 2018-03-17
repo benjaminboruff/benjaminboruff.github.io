@@ -1,32 +1,33 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import Gravatar from 'react-gravatar'
 
 const Header = (props) => (
   <div className="root">
     <style jsx>{`
       .root {
-        background: rebeccapurple;
+        background: black;
       }
       .wrapper {
         display: grid;
         height: 20rem;
-        grid-template-columns: 2fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-gap: 10px;
         grid-template-areas:
-          "name . "
-          "resume . "
-          "about gravatar";
+          "name resume about gravatar";
+
         align-items: center;
         justify-items: center;
+      }
+      img {
+        border-radius: 45px;
       }
       @media (min-width: 700px) {
         .wrapper {
           display: grid;
           height: 5rem;
-          grid-template-columns: repeat(6,1fr);
-          grid-gap: 20px;
-          grid-template-areas: "name name . resume about gravatar";
+          grid-template-columns: 3fr 1fr 1fr 1fr 1fr 1fr 1fr;
+          grid-gap: 10px;
+          grid-template-areas: "name . . . resume about gravatar";
           align-items: center;
           justify-items: center;
         }
@@ -62,7 +63,7 @@ const Header = (props) => (
           About
         </Link>
       </h4>
-      <Gravatar className="gravatar" style={{ borderRadius: '23px', margin: '0'}} email={props.email} />
+      <img className="gravatar" src={props.gravatarUrl} />
     </div>
   </div>
 )

@@ -15,6 +15,7 @@ const TemplateWrapper = ({ children, data }) => (
     />
     <Header name={data.site.siteMetadata.title}
             email={data.site.siteMetadata.email}
+            gravatarUrl={data.site.siteMetadata.gravatarUrl}
             resumeUrl={data.site.siteMetadata.resumeUrl} />
     <div className="root">
     <style jsx>{`
@@ -43,6 +44,7 @@ export const query = graphql`
       siteMetadata {
         title
         email
+        gravatarUrl
         resumeUrl
       }
     }
