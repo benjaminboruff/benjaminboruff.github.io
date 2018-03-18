@@ -7,9 +7,6 @@ const Header = (props) => (
       .root {
         background: black;
       }
-      img {
-        border-radius: 45px;
-      }
       @media only screen and (max-width: 600px) {
         nav {
           display: grid;
@@ -66,7 +63,7 @@ const Header = (props) => (
           align-self: end;
         }
         .gravatar {
-          padding-right: 10px;
+          margin-top: 5px;
         }
         .icon {
           display: none;
@@ -87,6 +84,8 @@ const Header = (props) => (
       }
       .gravatar {
         grid-area: gravatar;
+        border-radius: 15px;
+        max-width: 65px;
       }
       .icon {
         grid-area: icon;
