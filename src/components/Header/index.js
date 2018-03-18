@@ -19,9 +19,12 @@ const Header = (props) => (
         .gravatar, .about, .resume {
           display: none;
         }
+        .big-icon {
+          display: none;
+        }
         .icon {
-          margin-left: 20px;
-          margin-top: 5px;
+          margin-left: 10px;
+          margin-top: 10px;
         }
         .name {
           align-self: center;
@@ -29,13 +32,13 @@ const Header = (props) => (
         }
         .far-right {
           display: grid;
-          grid-column-gap: .7em;
+          /* grid-column-gap: .7em; */
           grid-template-columns: 1fr;
           grid-template-rows: 1fr;
           grid-template-areas: "social";
           justify-self: end;
           align-self: center;
-          margin-right: 20px;
+          margin-right: 10px;
         }
         .social {
           display: grid;
@@ -52,7 +55,10 @@ const Header = (props) => (
         }
         .icon {
           margin-left: 20px;
-          margin-top: 5px;
+          margin-top: 15px;
+        }
+        .big-icon {
+          display: none;
         }
         .name {
           align-self: center;
@@ -85,8 +91,12 @@ const Header = (props) => (
           grid-template-areas: "icon name far-right";
         }
         .icon {
+          display: none;
+        }
+        .big-icon {
+          justify-self: start;
+          align-self: center;
           margin-left: 20px;
-          margin-top: 5px;
         }
         .name {
           align-self: center;
@@ -154,6 +164,7 @@ const Header = (props) => (
     <header>
       <nav>
         <i className="icon fas fa-bars fa-lg" style={{color: 'white'}}></i>
+        <i className="big-icon fas fa-bars fa-4x" style={{color: 'white'}}></i>
         <h3 className="name">
           <Link style={{ color: 'white', textDecoration: 'none' }} to="/">
             {props.name}
