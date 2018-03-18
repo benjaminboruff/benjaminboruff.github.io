@@ -7,22 +7,48 @@ const Header = (props) => (
       .root {
         background: black;
       }
-      /* nav {
-        display: grid;
-        height: 20rem;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 110px
-        grid-gap: 1em;
-        grid-template-areas:
-          "name resume about gravatar";
-
-        align-items: center;
-        justify-items: center;
-      } */
       img {
         border-radius: 45px;
       }
-      @media screen and (min-width: 900px) {
+      @media only screen and (max-width: 600px) {
+        nav {
+          display: grid;
+          height: 5rem;
+          grid-template-columns: 50px 1fr 1fr;
+          grid-template-rows: 100px;
+          grid-gap: 1em;
+          grid-template-areas: "icon name name";
+          align-items: center;
+          justify-items: center;
+        }
+        .gravatar, .about, .resume {
+          display: none;
+        }
+        .icon {
+          align-self: start;
+          justify-self: start;
+          margin: 5px;
+        }
+        .name, .job {
+          justify-self: start;
+        }
+      }
+      @media only screen and (min-width: 600px) and (max-width: 767px) {
+        nav {
+          display: grid;
+          height: 5rem;
+          grid-template-columns: repeat(4, 1fr);
+          grid-template-rows: 100px;
+          grid-gap: 1em;
+          grid-template-areas: "name name about resume";
+          align-items: center;
+          justify-items: center;
+        }
+        .gravatar, .icon {
+          display: none;
+        }
+      }
+      @media only screen and (min-width: 768px) {
         nav {
           display: grid;
           height: 5rem;
@@ -39,34 +65,10 @@ const Header = (props) => (
         .resume {
           align-self: end;
         }
-      }
-      @media screen and (max-width: 899px) {
-        nav {
-          display: grid;
-          height: 5rem;
-          grid-template-columns: repeat(4, 1fr);
-          grid-template-rows: 100px;
-          grid-gap: 1em;
-          grid-template-areas: "name name about resume";
-          align-items: center;
-          justify-items: center;
-        }
         .gravatar {
-          display: none;
+          padding-right: 10px;
         }
-      }
-      @media screen and (max-width: 400px) {
-        nav {
-          display: grid;
-          height: 5rem;
-          grid-template-columns: repeat(2, 1fr);
-          grid-template-rows: 100px;
-          grid-gap: 1em;
-          grid-template-areas: "name name";
-          align-items: center;
-          justify-items: center;
-        }
-        .gravatar, .about, .resume {
+        .icon {
           display: none;
         }
       }
@@ -86,10 +88,14 @@ const Header = (props) => (
       .gravatar {
         grid-area: gravatar;
       }
+      .icon {
+        grid-area: icon;
+      }
     `}
     </style>
     <header>
       <nav>
+        <i className="icon fas fa-bars fa-lg" style={{color: 'white'}}></i>
         <h4 className="name">
           <Link style={{ color: 'white', textDecoration: 'none' }} to="/">
             {props.name}
