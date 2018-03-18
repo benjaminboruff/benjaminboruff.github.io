@@ -7,18 +7,18 @@ const Header = (props) => (
       .root {
         background: black;
       }
-      nav {
+      /* nav {
         display: grid;
         height: 20rem;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-auto-rows: auto;
+        grid-template-rows: 110px
         grid-gap: 1em;
         grid-template-areas:
           "name resume about gravatar";
 
         align-items: center;
         justify-items: center;
-      }
+      } */
       img {
         border-radius: 45px;
       }
@@ -27,17 +27,55 @@ const Header = (props) => (
           display: grid;
           height: 5rem;
           grid-template-columns: repeat(9, 1fr);
-          grid-auto-rows: auto;
+          grid-template-rows: 100px;
           grid-gap: 1em;
-          grid-template-areas: "name name about resume . . . . gravatar";
+          grid-template-areas: "name name . . . . about resume gravatar";
           align-items: center;
           justify-items: center;
+        }
+        .about {
+          align-self: end;
+        }
+        .resume {
+          align-self: end;
+        }
+      }
+      @media screen and (max-width: 899px) {
+        nav {
+          display: grid;
+          height: 5rem;
+          grid-template-columns: repeat(4, 1fr);
+          grid-template-rows: 100px;
+          grid-gap: 1em;
+          grid-template-areas: "name name about resume";
+          align-items: center;
+          justify-items: center;
+        }
+        .gravatar {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 400px) {
+        nav {
+          display: grid;
+          height: 5rem;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: 100px;
+          grid-gap: 1em;
+          grid-template-areas: "name name";
+          align-items: center;
+          justify-items: center;
+        }
+        .gravatar, .about, .resume {
+          display: none;
         }
       }
       .name {
         grid-area: name;
-        
-        margin-left: 15px;
+      }
+      .job {
+        grid-area: name;
+        align-self: end;
       }
       .resume {
         grid-area: resume;
@@ -52,22 +90,23 @@ const Header = (props) => (
     </style>
     <header>
       <nav>
-        <h2 className="name">
+        <h4 className="name">
           <Link style={{ color: 'white', textDecoration: 'none' }} to="/">
             {props.name}
           </Link>
-        </h2>
+        </h4>
+        <h6 className="job" style={{ color: 'white'}}>JS Developer</h6>
         <span></span>
-        <h4 className="resume">
+        <h5 className="resume">
           <a style={{ color: 'white', textDecoration: 'none' }} href={props.resumeUrl} >
             Resum&#233;
           </a>
-        </h4>
-        <h4 className="about">
+        </h5>
+        <h5 className="about">
           <Link style={{ color: 'white', textDecoration: 'none' }} to="/about/">
             About
           </Link>
-        </h4>
+        </h5>
         <img className="gravatar" src={props.gravatarUrl} />
       </nav>
     </header>
