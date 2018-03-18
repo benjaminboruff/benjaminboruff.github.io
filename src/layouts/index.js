@@ -13,10 +13,12 @@ const TemplateWrapper = ({ children, data }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <Header name={data.site.siteMetadata.title}
+    <Header title={data.site.siteMetadata.title}
+            name={data.site.siteMetadata.name}
             email={data.site.siteMetadata.email}
             gravatarUrl={data.site.siteMetadata.gravatarUrl}
-            resumeUrl={data.site.siteMetadata.resumeUrl} />
+            twitterUrl={data.site.siteMetadata.twitterUrl}
+            githubUrl={data.site.siteMetadata.githubUrl} />
     <div className="root">
     <style jsx>{`
       .root {
@@ -43,9 +45,11 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        name
         email
         gravatarUrl
-        resumeUrl
+        twitterUrl
+        githubUrl
       }
     }
   }
