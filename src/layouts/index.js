@@ -18,7 +18,7 @@ const TemplateWrapper = ({ children, data }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <Header title={data.site.siteMetadata.title}
+    <Header
             name={data.site.siteMetadata.name}
             email={data.site.siteMetadata.email}
             gravatarUrl={data.site.siteMetadata.gravatarUrl}
