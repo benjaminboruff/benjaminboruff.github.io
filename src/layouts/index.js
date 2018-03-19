@@ -2,7 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Header from '../components/Header'
-import '../fontawesome/fontawesome-all'
+import fontawesome from '@fortawesome/fontawesome'
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import brands from '@fortawesome/fontawesome-free-brands'
+import faBars from '@fortawesome/fontawesome-free-solid/faBars'
+
+fontawesome.library.add(brands, faBars)
 
 const TemplateWrapper = ({ children, data }) => (
   <div>
