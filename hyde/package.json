@@ -1,17 +1,18 @@
 {
     "private": true,
     "scripts": {
-        "dev": " mix",
-        "prod": "mix --production",
-        "watch": "mix watch"
+        "dev": "vite",
+        "build": "vite build"
     },
+    "type": "module",
     "devDependencies": {
-        "@tailwindcss/typography": "^0.5.2",
-        "autoprefixer": "^10.4.5",
-        "hydefront": "^3.4.1",
-        "laravel-mix": "^6.0.49",
-        "postcss": "^8.4.31",
-        "prettier": "3.5.3",
-        "tailwindcss": "^3.0.24"
+        "@tailwindcss/typography": "^0.5.0",
+        "@tailwindcss/vite": "^4.2.1",
+        "autoprefixer": "^10.4.0",
+        "hyde-vite-plugin": "^1.1.0",
+        "hydefront": "^4.0.0",
+        "postcss": "^8.5.0",
+        "tailwindcss": "^4.2.1",
+        "vite": "^7.1.0"
     }
 }
