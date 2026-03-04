@@ -294,7 +294,7 @@
             background-color: rgb(255 255 255/var(--tw-bg-opacity))
         }
 
-        .bg-gradient-to-br {
+        .bg-linear-to-br {
             background-image: linear-gradient(to bottom right, var(--tw-gradient-stops))
         }
 
